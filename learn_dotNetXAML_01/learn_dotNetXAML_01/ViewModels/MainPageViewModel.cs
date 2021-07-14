@@ -12,6 +12,9 @@ namespace learn_dotNetXAML_01.ViewModels
 
         public MainPageViewModel()
         {
+
+            AllNotes = new ObservableCollection<string>();
+
             EraseCommand = new Command(() =>
             {
                 TheNote = string.Empty;
@@ -43,8 +46,8 @@ namespace learn_dotNetXAML_01.ViewModels
             }
         }
 
-        Command SaveCommand { get; }
-        Command EraseCommand { get; }
+        public Command SaveCommand { get; }
+        public Command EraseCommand { get; }
 
 
     }
